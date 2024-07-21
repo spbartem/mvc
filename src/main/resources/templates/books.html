@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List Of Books</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        TABLE {
+         width: 500px;
+         border-collapse: collapse;
+        TD, TH {
+         padding: 3px;
+         border: 1px solid black;
+        }
+        TH {
+         background: #b0e0e6;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <th th:text="Наименование" />
+            <th th:text="Автор" />
+            <th th:text="|Количество страниц|" />
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="books : ${listOfBooks}">
+            <td th:text="${books.name}">Name</td>
+            <td th:text="${books.author}">Author</td>
+            <td th:text="${books.pages}">Pages</td>
+        </tr>
+    </tbody>
+</table>
+</body>

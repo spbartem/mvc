@@ -1,22 +1,26 @@
 <html>
     <head>
-        <title>List Of Books</title>
+        <title>Edit List Of Books</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
     <div>
-        <form>
-            <label>Наименование</label>
-            <input name="name" type="text"><br><br>
-            <label>Автор</label>
-            <input name="author" type="text"><br><br>
-            <label>Количество страниц</label>
-            <input name="pages" type="text"><hr>
+        <form action="" class="ui-form">
+            <div class="form-row">
+                <input type="text" id="name"><label for="name">Наименование</label>
+            </div>
+            <div class="form-row">
+                <input type="text" id="author"><label for="author">Автор</label>
+            </div>
+            <div class="form-row">
+                <input type="text" id="pages"><label for="pages">Количество страниц</label>
+            </div>
+            <p><input type="submit" value="Submit"></p>
         </form>
     </div>
     <div>
-        <table>
+        <table class="table">
             <thead>
             <tr>
                 <th>Наименование</th>

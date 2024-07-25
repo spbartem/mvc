@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>Books List</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="post" action="/update" class="ui-form">
+        <input type="hidden"
+               name="id"
+               th:value="${book.id}"
+        />
+        <input type="text"
+               name="name"
+               placeholder="Book name"
+               th:value="${book.name}"
+        />
+        <input type="text"
+               name="author"
+               placeholder="Book author"
+               th:value="${book.author}"
+        />
+        <input type="text"
+               name="pages"
+               placeholder="Number of pages"
+               th:value="${book.pages}"
+        />
+        <input type="submit" />
+    </form>
+</body>
+</html>
